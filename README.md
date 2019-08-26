@@ -13,3 +13,14 @@ $ sudo apt-get install cmake
 ```
 $ sudo yum install cmake
 ```
+
+## Variables Globales
+
+* `CMAKE_BINARY_DIR`: Si estás construyendo desde la fuente, esta variable es la misma que `CMAKE_SOURCE_DIR`. De otra manera, es la raiz del árbol de directorios.
+
+* `CMAKE_SOURCE_DIR`: Es el directorio desde donde se ejecuta cmake.
+
+* `EXECUTABLE_OUTPUT_PATH`: Esta variable se puede modificar para especificar el lugar donde cmake debe poner todos los archivos ejecutables en vez de ponerlos en `CMAKE_CURRENT_BINARY_DIR`.
+  ```
+  set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+  ```
