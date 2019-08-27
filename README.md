@@ -24,3 +24,15 @@ $ sudo yum install cmake
   ```
   set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
   ```
+
+* `LIBRARY_OUTPUT_PATH`: Esta variable se puede modificar para especificar el lugar donde cmake debe poner todas las bibliotecas en vez de ponerlos en `CMAKE_CURRENT_BINARY_DIR`.
+  ```
+  set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+  ```
+
+* `PROJECT_NAME`: Es el nombre del proyecto definido por el comando `project()`.
+
+* `PROJECT_SOURCE_DIR`: Contiene la ruta completa de los archivos fuente del projecto.
+  ```
+  add_executable(hello ${PROJECT_SOURCE_DIR}/test.cpp)
+  ```
